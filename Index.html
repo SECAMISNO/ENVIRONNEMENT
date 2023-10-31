@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comparateur d'Images</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+</head>
+</head>
+<body>
+   <div id="header" style="background-color: #1e2845;">
+        <h1>Comparateur d'Images</h1>
+    </div>
+
+    <table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Image</th>
+				<th>Photographe</th>
+				<th>Lieu</th>
+				<th>Date</th>
+				<th>Heure</th>
+				<th>Direction du Vent</th>
+				<th>Force du Vent</th>
+				<th>Pression</th>
+				<th>Vagues</th>
+				<th>Coefficient</th>
+				<th>Heure de Haute Mer</th>
+				<th>Mot-clé</th>
+			</tr>
+			<tr>
+				<th></th>
+				<th><input type="text" id="filterImage" placeholder="Filtrer"></th>
+				<th><input type="text" id="filterPhotographer" placeholder="Filtrer"></th>
+				<th><input type="text" id="filterPlace" placeholder="Filtrer"></th>
+				<th><input type="text" id="filterDate" placeholder="Filtrer"></th>
+				<th><input type="text" id="filterTime" placeholder="Filtrer"></th>
+				<th><input type="text" id="filterWindDirection" placeholder="Filtrer"></th>
+				<th><input type="text" id="filterWindForce" placeholder="Filtrer"></th>
+				<th><input type="text" id="filterPressure" placeholder="Filtrer"></th>
+				<th><input type="text" id="filterWaves" placeholder="Filtrer"></th>
+				<th><input type="text" id="filterCoefficient" placeholder="Filtrer"></th>
+				<th><input type="text" id="filterHighTideTime" placeholder="Filtrer"></th>
+				<th><input type="text" id="filterKeyword" placeholder="Filtrer"></th>
+			</tr>
+		</thead>
+		
+        <tbody id="imageTableBody">
+            <!-- Les données de l'image seront insérées ici via JavaScript -->
+        </tbody>
+    </table>
+
+    <div>
+        <label for="imageSelect1">Image 1 :</label>
+        <select id="imageSelect1" class="image-select"></select>
+
+        <label for="imageSelect2">Image 2 :</label>
+        <select id="imageSelect2" class="image-select"></select>
+
+        <button id="compareButton">Comparer</button>
+    </div>
+
+    <div id="comparisonResult">
+        <!-- Résultats de la comparaison affichés ici -->
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        loadImages();
+		fillDropdownOptions();
+    });
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
