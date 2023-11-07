@@ -208,11 +208,11 @@ function updateDropdownOptions() {
 
         const option1 = document.createElement('option');
         option1.value = imageId;
-        option1.text = imagePhotographer;
+        option1.text = imageId;
 
         const option2 = document.createElement('option');
         option2.value = imageId;
-        option2.text = imagePhotographer;
+        option2.text = imageId;
 
         imageSelect1.appendChild(option1);
         imageSelect2.appendChild(option2);
