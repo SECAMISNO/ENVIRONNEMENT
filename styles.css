@@ -1,5 +1,12 @@
 body {
     font-family: "Comfortaa", sans-serif;
+	margin: 0px;
+}
+
+#centerdiv {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+	margin: 10px 0;
 }
 
 /* Style pour la liste déroulante */
@@ -21,21 +28,58 @@ body {
 
 #header {
     background-color: #1e2845;
-    padding: 10px; /* Ajoutez du padding pour un meilleur espacement */
     text-align: center; /* Pour centrer le texte */
-	margin: 0; !important
+}
+
+.title-website {
+	display: flex;
+	justify-content: center; /* Centre horizontalement */
+	/* float: left; */
+	background-color: #1e2845;
+	width: 100%;
 }
 
 h1 {
     font-family: 'Comfortaa', sans-serif; /* Applique la police Comfortaa */
     color: #fff; /* Couleur du texte en blanc */
+	margin: 0;
+	padding: 20px;
+}
+
+.h1-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+img.logo {
+    float: right; /* Vous pouvez utiliser "right" pour aligner à droite */
+    margin-right: 10px; /* Ajoute de l'espace entre l'image et le texte */
+	height: 150px;
+}
+
+
+.h1-first {
+  background-color: #fff;
+  color: #1e2845;
+  text-transform: uppercase;
+  padding: 12px 35px 5px 20px;
+  font-weight: 600;
+  float: left;
+}
+
+.h1-sec {
+  border: 2px solid #fff;
+  margin-top: 10px;
+  float: left;
+  color: #fff;
+  padding: 12px 35px 5px 20px;
+  font-weight: 300;
 }
 
 /* Styliser le tableau */
 table {
-    width: 95%;
+    width: 100%;
     border-collapse: collapse;
-    margin: 10px 0;
 }
 
 /* Réduire la taille des miniatures dans le tableau à 100px de hauteur */
@@ -65,4 +109,38 @@ td img {
 
 input[type="text"] {
     width: 100px; /* Vous pouvez ajuster cette valeur en fonction de la largeur souhaitée */
+}
+
+.rectangle {
+	background-color: #1a6395;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	max-width: 600px; /* Largeur maximale du rectangle */
+    margin: 0 auto; /* Pour le centrer horizontalement */
+}
+
+.main-text {
+	font-family: 'Roboto', 'Roboto-fallback', sans-serif;
+	text-transform: uppercase;
+	font-size: 2.5rem;
+	line-height: 2.438rem;
+	font-weight: 700;
+}
+
+.sub-text {
+	font-weight: 400;
+	font-size: 2.5rem;
+	line-height: 2.438rem;
+	font-style: italic;
+	text-transform: uppercase;
+	font-family: 'Roboto', 'Roboto-fallback', sans-serif;
+}
+
+.location-text {
+	font-family: 'Roboto', 'Roboto-fallback', sans-serif;
+	font-size: 1.1875rem;
+	font-weight: 500;
+	line-height: 1.938rem;
+	text-transform: uppercase;
 }

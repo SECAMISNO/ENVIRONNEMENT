@@ -9,10 +9,9 @@ const imageDatabase = [
         windDirection: 'SO',
         windForce: '7',
         pressure: '994',
-        waves: '',
         coefficient: 104,
-        highTideTime: '',
-        keyword: ''
+        keyword: '',
+		infos: ''
     },
     {
         id: 2,
@@ -24,10 +23,9 @@ const imageDatabase = [
         windDirection: 'SO',
         windForce: '7',
         pressure: '994',
-        waves: '',
         coefficient: 104,
-        highTideTime: '',
-        keyword: ''
+        keyword: '',
+		infos: ''
     },
 	{
         id: 3,
@@ -39,10 +37,9 @@ const imageDatabase = [
         windDirection: 'SO',
         windForce: '7',
         pressure: '994',
-        waves: '',
         coefficient: 104,
-        highTideTime: '',
-        keyword: ''
+        keyword: '',
+		infos: ''
     },
 	{
         id: 4,
@@ -54,10 +51,9 @@ const imageDatabase = [
         windDirection: 'SO',
         windForce: '7',
         pressure: '994',
-        waves: '',
         coefficient: 104,
-        highTideTime: '',
-        keyword: ''
+        keyword: '',
+		infos: ''
     },
 	{
         id: 5,
@@ -69,10 +65,9 @@ const imageDatabase = [
         windDirection: 'SO',
         windForce: '7',
         pressure: '994',
-        waves: '',
         coefficient: 104,
-        highTideTime: '',
-        keyword: ''
+        keyword: '',
+		infos: ''
     },
 ];
 
@@ -104,10 +99,9 @@ function loadImages() {
             <td>${image.windDirection}</td>
             <td>${image.windForce}</td>
             <td>${image.pressure}</td>
-            <td>${image.waves}</td>
             <td>${image.coefficient}</td>
-            <td>${image.highTideTime}</td>
             <td>${image.keyword}</td>
+			<td>${image.infos}</td>
         `;
 
         imageTableBody.appendChild(row);
@@ -154,10 +148,9 @@ const filterTime = document.getElementById('filterTime');
 const filterWindDirection = document.getElementById('filterWindDirection');
 const filterWindForce = document.getElementById('filterWindForce');
 const filterPressure = document.getElementById('filterPressure');
-const filterWaves = document.getElementById('filterWaves');
 const filterCoefficient = document.getElementById('filterCoefficient');
-const filterHighTideTime = document.getElementById('filterHighTideTime');
 const filterKeyword = document.getElementById('filterKeyword');
+const filterInfos = document.getElementById('filterInfos');
 
 // Écoutez les événements d'entrée pour le filtrage
 filterImage.addEventListener('input', applyFilters);
@@ -168,10 +161,9 @@ filterTime.addEventListener('input', applyFilters);
 filterWindDirection.addEventListener('input', applyFilters);
 filterWindForce.addEventListener('input', applyFilters);
 filterPressure.addEventListener('input', applyFilters);
-filterWaves.addEventListener('input', applyFilters);
 filterCoefficient.addEventListener('input', applyFilters);
-filterHighTideTime.addEventListener('input', applyFilters);
 filterKeyword.addEventListener('input', applyFilters);
+filterInfos.addEventListener('input', applyFilters);
 
 // Fonction pour remplir les menus déroulants par défaut
 function fillDropdownOptions() {
@@ -238,10 +230,9 @@ function applyFilters() {
         windDirection: filterWindDirection.value.toLowerCase(),
         windForce: filterWindForce.value.toLowerCase(),
         pressure: filterPressure.value.toLowerCase(),
-        waves: filterWaves.value.toLowerCase(),
         coefficient: filterCoefficient.value.toLowerCase(),
-        highTideTime: filterHighTideTime.value.toLowerCase(),
-        keyword: filterKeyword.value.toLowerCase()
+        keyword: filterKeyword.value.toLowerCase(),
+		infos: filterInfos.value.toLowerCase()
     };
 
     const rows = document.querySelectorAll('table tbody tr');

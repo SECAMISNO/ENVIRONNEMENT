@@ -7,8 +7,17 @@
 </head>
 </head>
 <body>
-   <div id="header" style="background-color: #1e2845;">
-        <h1>Comparateur d'Images</h1>
+    <div id="header">
+		<div class="title-website">
+			<h1>
+				<span class="h1-text">
+					<span class="h1-first">Les Amis de l’île</span></br><br>
+					<span class="h1-sec">de Noirmoutier</span></br><br>
+				</span>
+				<img src="res/logo-amis-ile-noirmoutier.png" class="logo">
+			</h1>
+		</div>
+		<h1>Comparateur d'Images</h1>
     </div>
 
     <table>
@@ -23,10 +32,9 @@
 				<th>Direction du Vent</th>
 				<th>Force du Vent</th>
 				<th>Pression</th>
-				<th>Vagues</th>
 				<th>Coefficient</th>
-				<th>Heure de Haute Mer</th>
 				<th>Mot-clé</th>
+				<th>Informations complémentaires</th>
 			</tr>
 			<tr>
 				<th></th>
@@ -38,10 +46,9 @@
 				<th><input type="text" id="filterWindDirection" placeholder="Filtrer"></th>
 				<th><input type="text" id="filterWindForce" placeholder="Filtrer"></th>
 				<th><input type="text" id="filterPressure" placeholder="Filtrer"></th>
-				<th><input type="text" id="filterWaves" placeholder="Filtrer"></th>
 				<th><input type="text" id="filterCoefficient" placeholder="Filtrer"></th>
-				<th><input type="text" id="filterHighTideTime" placeholder="Filtrer"></th>
 				<th><input type="text" id="filterKeyword" placeholder="Filtrer"></th>
+				<th><input type="text" id="filterInfos" placeholder="Filtrer"></th>
 			</tr>
 		</thead>
 		
@@ -50,11 +57,11 @@
         </tbody>
     </table>
 
-    <div>
-        <label for="imageSelect1">Image 1 :</label>
+    <div id="centerdiv">
+        <label for="imageSelect1">Image 1 :&nbsp;</label>
         <select id="imageSelect1" class="image-select"></select>
 
-        <label for="imageSelect2">Image 2 :</label>
+        <label for="imageSelect2">Image 2 :&nbsp;</label>
         <select id="imageSelect2" class="image-select"></select>
 
         <button id="compareButton">Comparer</button>
@@ -63,7 +70,14 @@
     <div id="comparisonResult">
         <!-- Résultats de la comparaison affichés ici -->
     </div>
-
+	
+	<div class="rectangle">
+        <a href="https://marine.meteoconsult.fr/meteo-marine/bulletin-detaille/port-167/previsions-meteo-noirmoutier-en-l-ile-aujourdhui" style="text-decoration: none; color: white;">
+            <span class="main-text inline">METEO</span> <span class="sub-text inline">Marine</span>
+            <div class="location-text">Port de Noirmoutier-en-l'île</div>
+        </a>
+    </div>
+	
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         loadImages();
