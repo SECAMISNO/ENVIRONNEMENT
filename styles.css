@@ -1,6 +1,7 @@
 body {
     font-family: "Comfortaa", sans-serif;
 	margin: 0px;
+	transition: background-color 0.5s;
 }
 
 #centerdiv {
@@ -80,6 +81,7 @@ img.logo {
 table {
     width: 100%;
     border-collapse: collapse;
+	background: white;
 }
 
 /* Réduire la taille des miniatures dans le tableau à 100px de hauteur */
@@ -143,4 +145,10 @@ input[type="text"] {
 	font-weight: 500;
 	line-height: 1.938rem;
 	text-transform: uppercase;
+}
+
+#toggleButton {
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
 }

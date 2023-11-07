@@ -254,3 +254,21 @@ function applyFilters() {
 
 // Appliquez les filtres lors du chargement de la page
 applyFilters();
+
+//Changement de la couleur du fond
+const body = document.body;
+        const button = document.getElementById('toggleButton');
+        let isWhite = true; // Variable pour suivre l'état actuel de la couleur
+
+        // Fonction pour changer la couleur du fond
+        function toggleBackgroundColor() {
+            if (isWhite) {
+                body.style.backgroundColor = 'black';
+            } else {
+                body.style.backgroundColor = 'white';
+            }
+            isWhite = !isWhite; // Inverser l'état
+        }
+
+        // Ajouter un gestionnaire d'événement au bouton
+        button.addEventListener('click', toggleBackgroundColor);
