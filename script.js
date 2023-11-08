@@ -71,6 +71,10 @@ const imageDatabase = [
     },
 ];
 
+/////////////
+// Tableau //
+/////////////
+
 const imageTableBody = document.getElementById('imageTableBody');
 const imageSelect1 = document.getElementById('imageSelect1');
 const imageSelect2 = document.getElementById('imageSelect2');
@@ -107,37 +111,6 @@ function loadImages() {
         imageTableBody.appendChild(row);
     });
 }
-
-compareButton.addEventListener('click', () => {
-    const imageId1 = imageSelect1.value;
-    const imageId2 = imageSelect2.value;
-
-    if (imageId1 === imageId2) {
-        comparisonResult.textContent = 'Sélectionnez deux images différentes pour comparer.';
-    } else {
-        // Récupérez les éléments image correspondant aux sélections
-        const selectedImage1 = imageDatabase.find((image) => image.id === parseInt(imageId1));
-        const selectedImage2 = imageDatabase.find((image) => image.id === parseInt(imageId2));
-
-        // Créez les éléments d'image pour afficher côte à côte
-        const imageElement1 = document.createElement('img');
-        imageElement1.src = selectedImage1.src;
-        imageElement1.id = 'image1';
-
-        const imageElement2 = document.createElement('img');
-        imageElement2.src = selectedImage2.src;
-        imageElement2.id = 'image2';
-
-        // Appliquez les styles pour afficher les images côte à côte
-        imageElement1.style.width = '40%';
-        imageElement2.style.width = '40%';
-
-        // Remplacez le contenu de comparisonResult par les images
-        comparisonResult.innerHTML = '';
-        comparisonResult.appendChild(imageElement1);
-        comparisonResult.appendChild(imageElement2);
-    }
-});
 
 // Récupérez les éléments d'entrée de filtrage
 const filterImage = document.getElementById('filterImage');
@@ -255,7 +228,45 @@ function applyFilters() {
 // Appliquez les filtres lors du chargement de la page
 applyFilters();
 
-//Changement de la couleur du fond
+/////////////////
+// Comparaison //
+/////////////////
+
+compareButton.addEventListener('click', () => {
+    const imageId1 = imageSelect1.value;
+    const imageId2 = imageSelect2.value;
+
+    if (imageId1 === imageId2) {
+        comparisonResult.textContent = 'Sélectionnez deux images différentes pour comparer.';
+    } else {
+        // Récupérez les éléments image correspondant aux sélections
+        const selectedImage1 = imageDatabase.find((image) => image.id === parseInt(imageId1));
+        const selectedImage2 = imageDatabase.find((image) => image.id === parseInt(imageId2));
+
+        // Créez les éléments d'image pour afficher côte à côte
+        const imageElement1 = document.createElement('img');
+        imageElement1.src = selectedImage1.src;
+        imageElement1.id = 'image1';
+
+        const imageElement2 = document.createElement('img');
+        imageElement2.src = selectedImage2.src;
+        imageElement2.id = 'image2';
+
+        // Appliquez les styles pour afficher les images côte à côte
+        imageElement1.style.width = '40%';
+        imageElement2.style.width = '40%';
+
+        // Remplacez le contenu de comparisonResult par les images
+        comparisonResult.innerHTML = '';
+        comparisonResult.appendChild(imageElement1);
+        comparisonResult.appendChild(imageElement2);
+    }
+});
+
+//////////////////////////////////////
+// Changement de la couleur du fond //
+//////////////////////////////////////
+
 const body = document.body;
         const button = document.getElementById('toggleButton');
         let isWhite = true; // Variable pour suivre l'état actuel de la couleur
@@ -272,3 +283,7 @@ const body = document.body;
 
         // Ajouter un gestionnaire d'événement au bouton
         button.addEventListener('click', toggleBackgroundColor);
+		
+//////////////
+// Zoom Box //
+//////////////
