@@ -243,23 +243,21 @@ compareButton.addEventListener('click', () => {
         const selectedImage1 = imageDatabase.find((image) => image.id === parseInt(imageId1));
         const selectedImage2 = imageDatabase.find((image) => image.id === parseInt(imageId2));
 
-        // Créez les éléments d'image pour afficher côte à côte
-        const imageElement1 = document.createElement('img');
-        imageElement1.src = selectedImage1.src;
-        imageElement1.id = 'image1';
+		// Changer image1 et le fond de figure1 avec la valeur SelectedImage1
+		var imageElement1 = document.getElementById("image1");
+		imageElement1.src = selectedImage1.src;
+		var figureElement1 = document.getElementById("figure1");
+		if (figureElement1) {
+			figureElement1.style.backgroundImage = `url(${selectedImage1.src})`;
+		}
 
-        const imageElement2 = document.createElement('img');
-        imageElement2.src = selectedImage2.src;
-        imageElement2.id = 'image2';
-
-        // Appliquez les styles pour afficher les images côte à côte
-        imageElement1.style.width = '40%';
-        imageElement2.style.width = '40%';
-
-        // Remplacez le contenu de comparisonResult par les images
-        comparisonResult.innerHTML = '';
-        comparisonResult.appendChild(imageElement1);
-        comparisonResult.appendChild(imageElement2);
+		// Changer image2 et le fond de figure2 avec la valeur SelectedImage2
+		var imageElement2 = document.getElementById("image2");
+		imageElement2.src = selectedImage2.src;
+		var figureElement2 = document.getElementById("figure2");
+		if (figureElement2) {
+			figureElement2.style.backgroundImage = `url(${selectedImage2.src})`;
+		}
     }
 });
 
@@ -268,6 +266,8 @@ compareButton.addEventListener('click', () => {
 //////////////////////////////////////
 
 const body = document.body;
+const label = document.querySelector('.label');
+const label2 = document.querySelector('.label2');
         const button = document.getElementById('toggleButton');
         let isWhite = true; // Variable pour suivre l'état actuel de la couleur
 
@@ -275,8 +275,12 @@ const body = document.body;
         function toggleBackgroundColor() {
             if (isWhite) {
                 body.style.backgroundColor = 'black';
+				label.style.color = 'white';
+				label2.style.color = 'white';
             } else {
                 body.style.backgroundColor = 'white';
+				label.style.color = 'black';
+				label2.style.color = 'black';
             }
             isWhite = !isWhite; // Inverser l'état
         }
@@ -284,6 +288,15 @@ const body = document.body;
         // Ajouter un gestionnaire d'événement au bouton
         button.addEventListener('click', toggleBackgroundColor);
 		
-//////////////
-// Zoom Box //
-//////////////
+//////////
+// Zoom //
+//////////
+
+function zoom(e){
+  var zoomer = e.currentTarget;
+  e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+  e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
+  x = offsetX/zoomer.offsetWidth*100
+  y = offsetY/zoomer.offsetHeight*100
+  zoomer.style.backgroundPosition = x + '% ' + y + '%';
+}

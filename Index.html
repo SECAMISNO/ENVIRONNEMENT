@@ -8,60 +8,63 @@
 </head>
 <body>
     <div id="header">
-		<div class="title-website">
-			<h1>
-				<span class="h1-text">
-					<span class="h1-first">Les Amis de l’île</span></br><br>
-					<span class="h1-sec">de Noirmoutier</span></br><br>
-				</span>
-				<img src="res/logo-amis-ile-noirmoutier.png" class="logo">
-			</h1>
-		</div>
-		<h1>Comparateur d'Images</h1>
+		<h1>
+			<span class="h1-text">
+				<span class="h1-first">Les Amis de l’île</span></br><br>
+				<span class="h1-sec">de Noirmoutier</span></br><br>
+			</span>
+			<img src="res/logo-amis-ile-noirmoutier.png">
+			<span class="h1-text">
+				Banque et comparateur d'images</br>
+				Commission Nature & Environnement</br></br>
+			</span>
+		</h1>
     </div>
 
-    <table>
-		<thead>
-			<tr>
-				<th>ID</th>
-				<th>Image</th>
-				<th>Photographe</th>
-				<th>Lieu</th>
-				<th>Date</th>
-				<th>Heure</th>
-				<th>Direction du Vent</th>
-				<th>Force du Vent</th>
-				<th>Pression</th>
-				<th>Coefficient</th>
-				<th>Mot-clé</th>
-				<th>Informations complémentaires</th>
-			</tr>
-			<tr>
-				<th></th>
-				<th><input type="text" id="filterImage" placeholder="Filtrer"></th>
-				<th><input type="text" id="filterPhotographer" placeholder="Filtrer"></th>
-				<th><input type="text" id="filterPlace" placeholder="Filtrer"></th>
-				<th><input type="text" id="filterDate" placeholder="Filtrer"></th>
-				<th><input type="text" id="filterTime" placeholder="Filtrer"></th>
-				<th><input type="text" id="filterWindDirection" placeholder="Filtrer"></th>
-				<th><input type="text" id="filterWindForce" placeholder="Filtrer"></th>
-				<th><input type="text" id="filterPressure" placeholder="Filtrer"></th>
-				<th><input type="text" id="filterCoefficient" placeholder="Filtrer"></th>
-				<th><input type="text" id="filterKeyword" placeholder="Filtrer"></th>
-				<th><input type="text" id="filterInfos" placeholder="Filtrer"></th>
-			</tr>
-		</thead>
-		
-        <tbody id="imageTableBody">
-            <!-- Les données de l'image seront insérées ici via JavaScript -->
-        </tbody>
-    </table>
+	<div class="tableFixHead">
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Image</th>
+					<th>Photographe</th>
+					<th>Lieu</th>
+					<th>Date</th>
+					<th>Heure</th>
+					<th>Direction du Vent</th>
+					<th>Force du Vent</th>
+					<th>Pression</th>
+					<th>Coefficient</th>
+					<th>Mot-clé</th>
+					<th>Informations complémentaires</th>
+				</tr>
+				<tr>
+					<th></th>
+					<th><input type="text" id="filterImage" placeholder="Filtrer"></th>
+					<th><input type="text" id="filterPhotographer" placeholder="Filtrer"></th>
+					<th><input type="text" id="filterPlace" placeholder="Filtrer"></th>
+					<th><input type="text" id="filterDate" placeholder="Filtrer"></th>
+					<th><input type="text" id="filterTime" placeholder="Filtrer"></th>
+					<th><input type="text" id="filterWindDirection" placeholder="Filtrer"></th>
+					<th><input type="text" id="filterWindForce" placeholder="Filtrer"></th>
+					<th><input type="text" id="filterPressure" placeholder="Filtrer"></th>
+					<th><input type="text" id="filterCoefficient" placeholder="Filtrer"></th>
+					<th><input type="text" id="filterKeyword" placeholder="Filtrer"></th>
+					<th><input type="text" id="filterInfos" placeholder="Filtrer"></th>
+				</tr>
+			</thead>
+			
+			<tbody id="imageTableBody">
+				<!-- Les données de l'image seront insérées ici via JavaScript -->
+			</tbody>
+		</table>
+	</div>
 
     <div id="centerdiv">
-        <label for="imageSelect1">Image 1 :&nbsp;</label>
+        <label class="label" for="imageSelect1">Image 1 :</label>
         <select id="imageSelect1" class="image-select"></select>
 
-        <label for="imageSelect2">Image 2 :&nbsp;</label>
+        <label class="label2" for="imageSelect2">Image 2 :</label>
         <select id="imageSelect2" class="image-select"></select>
 
         <button id="compareButton">Comparer</button>
@@ -70,13 +73,19 @@
     </div>
 
     <div id="comparisonResult">
-        <!-- Résultats de la comparaison affichés ici -->
-    </div>
+		<!-- Résultats de la comparaison affichés ici -->
+		<figure id="figure1" class="zoom" onmousemove="zoom(event)" style="background-image: url(img/image1.jpg)">
+			<img id="image1" src="img/image1.jpg">
+		</figure>
+		<figure id="figure2" class="zoom" onmousemove="zoom(event)" style="background-image: url(img/image2.jpg)">
+			<img id="image2" src="img/image2.jpg">
+		</figure>
+	</div>
 	
-	<div class="rectangle">
+	<div class="meteo">
         <a href="https://marine.meteoconsult.fr/meteo-marine/bulletin-detaille/port-167/previsions-meteo-noirmoutier-en-l-ile-aujourdhui" style="text-decoration: none; color: white;">
-            <span class="main-text inline">METEO</span> <span class="sub-text inline">Marine</span>
-            <div class="location-text">Port de Noirmoutier-en-l'île</div>
+            <span class="meteo1 inline">METEO</span> <span class="meteo2 inline">Marine</span>
+            <div class="meteo3">Port de Noirmoutier-en-l'île</div>
         </a>
     </div>
 	

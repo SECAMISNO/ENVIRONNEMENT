@@ -4,39 +4,12 @@ body {
 	transition: background-color 0.5s;
 }
 
-#centerdiv {
-    display: flex;
-    justify-content: center; /* Centre horizontalement */
-	margin: 10px 0;
-}
-
-/* Style pour la liste déroulante */
-.image-select {
-    width: 200px;
-}
-
-/* Redimensionner les images comparées à 40% de la largeur de l'écran */
-#image1, #image2 {
-    width: 40%;
-    max-width: 100%; /* Garantit que l'image ne dépasse pas la largeur de l'écran */
-    height: auto; /* Maintient le ratio d'aspect de l'image */
-}
-
-#comparisonResult {
-    display: flex;
-    justify-content: space-evenly; /* Espace égal entre les éléments flex */
-}
+/* Header */
 
 #header {
     background-color: #1e2845;
-    text-align: center; /* Pour centrer le texte */
-}
-
-.title-website {
 	display: flex;
-	justify-content: center; /* Centre horizontalement */
-	/* float: left; */
-	background-color: #1e2845;
+	justify-content: center;
 	width: 100%;
 }
 
@@ -52,12 +25,11 @@ h1 {
     vertical-align: middle;
 }
 
-img.logo {
-    float: right; /* Vous pouvez utiliser "right" pour aligner à droite */
+h1 img {
     margin-right: 10px; /* Ajoute de l'espace entre l'image et le texte */
+	vertical-align: middle;
 	height: 150px;
 }
-
 
 .h1-first {
   background-color: #fff;
@@ -77,14 +49,26 @@ img.logo {
   font-weight: 300;
 }
 
-/* Styliser le tableau */
+/* Tableau */
+
+.tableFixHead {
+	overflow-y: auto;
+	max-height: 800px;
+	border-bottom: 1px solid black;
+	margin-right: 10px;
+}
+.tableFixHead thead th {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
 	background: white;
 }
 
-/* Réduire la taille des miniatures dans le tableau à 100px de hauteur */
 table img {
     height: 100px;
     width: auto;
@@ -95,7 +79,7 @@ table, td {
 }
 
 th, td {
-    padding: 10px;
+    padding: 5px;
     text-align: left;
 }
 
@@ -113,7 +97,61 @@ input[type="text"] {
     width: 100px; /* Vous pouvez ajuster cette valeur en fonction de la largeur souhaitée */
 }
 
-.rectangle {
+/* Comparateur */
+
+#centerdiv {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+	margin: 10px 0;
+}
+
+label {
+	margin-left: 5px;
+	transition: color 0.5s;
+}
+
+.image-select {
+    width: 50px;
+	margin-left: 5px;
+}
+
+#comparisonResult {
+    display: flex;
+    justify-content: space-evenly; /* Espace égal entre les éléments flex */
+}
+
+#image1, #image2 {
+    width: 100%;
+    max-width: 100%; /* Garantit que l'image ne dépasse pas la largeur de l'écran */
+    height: auto; /* Maintient le ratio d'aspect de l'image */
+}
+
+#toggleButton, #compareButton {
+	cursor: pointer;
+	margin-left: 25px;
+}
+
+figure.zoom {
+	background-position: 50% 50%;
+	border: 5px solid white;
+	box-shadow: -1px 5px 15px black;
+	width: 50%;
+	height: auto;
+	overflow: hidden;
+	cursor: zoom-in;
+}
+figure.zoom img:hover {
+	opacity: 0;
+}
+figure.zoom img {
+	transition: opacity 0.5s;
+	display: block;
+	width: 100%;
+}
+
+/* Meteo Marine */
+
+.meteo {
 	background-color: #1a6395;
 	color: white;
 	padding: 10px;
@@ -123,7 +161,7 @@ input[type="text"] {
 	border: .1875rem solid #ffc400;
 }
 
-.main-text {
+.meteo1 {
 	font-family: 'Roboto', 'Roboto-fallback', sans-serif;
 	text-transform: uppercase;
 	font-size: 2.5rem;
@@ -131,7 +169,7 @@ input[type="text"] {
 	font-weight: 700;
 }
 
-.sub-text {
+.meteo2 {
 	font-weight: 400;
 	font-size: 2.5rem;
 	line-height: 2.438rem;
@@ -140,14 +178,10 @@ input[type="text"] {
 	font-family: 'Roboto', 'Roboto-fallback', sans-serif;
 }
 
-.location-text {
+.meteo3 {
 	font-family: 'Roboto', 'Roboto-fallback', sans-serif;
 	font-size: 1.1875rem;
 	font-weight: 500;
 	line-height: 1.938rem;
 	text-transform: uppercase;
-}
-
-#toggleButton, #compareButton {
-	cursor: pointer;
 }
