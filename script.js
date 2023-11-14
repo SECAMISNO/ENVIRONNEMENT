@@ -321,62 +321,62 @@ function generateText() {
 	parentElement.appendChild(pintro);
 	
 	var pid = document.createElement("p");
-	pid.textContent = "\u00A0\u00A0\u00A0\u00A0id : " + id +",";
+	pid.textContent = "\u00A0\u00A0\u00A0\u00A0id : '" + id +"',";
 	var parentElement = document.getElementById("result");
 	parentElement.appendChild(pid);
 	
 	var psrc = document.createElement("p");
-	psrc.textContent = "\u00A0\u00A0\u00A0\u00A0src : " + src +",";
+	psrc.textContent = "\u00A0\u00A0\u00A0\u00A0src : '" + src +"',";
 	var parentElement = document.getElementById("result");
 	parentElement.appendChild(psrc);
 	
 	var pphotographer = document.createElement("p");
-	pphotographer.textContent = "\u00A0\u00A0\u00A0\u00A0photographer : " + photographer +",";
+	pphotographer.textContent = "\u00A0\u00A0\u00A0\u00A0photographer : '" + photographer +"',";
 	var parentElement = document.getElementById("result");
 	parentElement.appendChild(pphotographer);
 	
 	var pplace = document.createElement("p");
-	pplace.textContent = "\u00A0\u00A0\u00A0\u00A0place : " + place +",";
+	pplace.textContent = "\u00A0\u00A0\u00A0\u00A0place : '" + place +"',";
 	var parentElement = document.getElementById("result");
 	parentElement.appendChild(pplace);
 	
 	var pdate = document.createElement("p");
-	pdate.textContent = "\u00A0\u00A0\u00A0\u00A0date : " + date +",";
+	pdate.textContent = "\u00A0\u00A0\u00A0\u00A0date : '" + date +"',";
 	var parentElement = document.getElementById("result");
 	parentElement.appendChild(pdate);
 	
 	var ptime = document.createElement("p");
-	ptime.textContent = "\u00A0\u00A0\u00A0\u00A0time : " + time +",";
+	ptime.textContent = "\u00A0\u00A0\u00A0\u00A0time : '" + time +"',";
 	var parentElement = document.getElementById("result");
 	parentElement.appendChild(ptime);
 	
 	var pwindDirection = document.createElement("p");
-	pwindDirection.textContent = "\u00A0\u00A0\u00A0\u00A0windDirection : " + windDirection +",";
+	pwindDirection.textContent = "\u00A0\u00A0\u00A0\u00A0windDirection : '" + windDirection +"',";
 	var parentElement = document.getElementById("result");
 	parentElement.appendChild(pwindDirection);
 	
 	var pwindForce = document.createElement("p");
-	pwindForce.textContent = "\u00A0\u00A0\u00A0\u00A0windForce : " + windForce +",";
+	pwindForce.textContent = "\u00A0\u00A0\u00A0\u00A0windForce : '" + windForce +"',";
 	var parentElement = document.getElementById("result");
 	parentElement.appendChild(pwindForce);
 	
 	var ppressure = document.createElement("p");
-	ppressure.textContent = "\u00A0\u00A0\u00A0\u00A0pressure : " + pressure +",";
+	ppressure.textContent = "\u00A0\u00A0\u00A0\u00A0pressure : '" + pressure +"',";
 	var parentElement = document.getElementById("result");
 	parentElement.appendChild(ppressure);
 	
 	var pcoefficient = document.createElement("p");
-	pcoefficient.textContent = "\u00A0\u00A0\u00A0\u00A0coefficient : " + coefficient +",";
+	pcoefficient.textContent = "\u00A0\u00A0\u00A0\u00A0coefficient : '" + coefficient +"',";
 	var parentElement = document.getElementById("result");
 	parentElement.appendChild(pcoefficient);
 	
 	var pkeyword = document.createElement("p");
-	pkeyword.textContent = "\u00A0\u00A0\u00A0\u00A0keyword : " + keyword +",";
+	pkeyword.textContent = "\u00A0\u00A0\u00A0\u00A0keyword : '" + keyword +"',";
 	var parentElement = document.getElementById("result");
 	parentElement.appendChild(pkeyword);
 	
 	var pinfos = document.createElement("p");
-	pinfos.textContent = "\u00A0\u00A0\u00A0\u00A0infos : " + infos +",";
+	pinfos.textContent = "\u00A0\u00A0\u00A0\u00A0infos : '" + infos +"'";
 	var parentElement = document.getElementById("result");
 	parentElement.appendChild(pinfos);
 	
