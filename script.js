@@ -300,3 +300,97 @@ function zoom(e){
   y = offsetY/zoomer.offsetHeight*100
   zoomer.style.backgroundPosition = x + '% ' + y + '%';
 }
+
+function generateText() {
+    var id = document.getElementById('id').value;
+    var src = document.getElementById('src').value;
+    var photographer = document.getElementById('photographer').value;
+    var place = document.getElementById('place').value;
+    var date = document.getElementById('date').value;
+    var time = document.getElementById('time').value;
+    var windDirection = document.getElementById('windDirection').value;
+    var windForce = document.getElementById('windForce').value;
+    var pressure = document.getElementById('pressure').value;
+    var coefficient = document.getElementById('coefficient').value;
+    var keyword = document.getElementById('keyword').value;
+    var infos = document.getElementById('infos').value;
+
+	var pintro = document.createElement("p");
+	pintro.textContent = "{";
+	var parentElement = document.getElementById("result");
+	parentElement.appendChild(pintro);
+	
+	var pid = document.createElement("p");
+	pid.textContent = "\u00A0\u00A0\u00A0\u00A0id : " + id;
+	var parentElement = document.getElementById("result");
+	parentElement.appendChild(pid);
+	
+	var psrc = document.createElement("p");
+	psrc.textContent = "\u00A0\u00A0\u00A0\u00A0src : " + src;
+	var parentElement = document.getElementById("result");
+	parentElement.appendChild(psrc);
+	
+	var pphotographer = document.createElement("p");
+	pphotographer.textContent = "\u00A0\u00A0\u00A0\u00A0photographer : " + photographer;
+	var parentElement = document.getElementById("result");
+	parentElement.appendChild(pphotographer);
+	
+	var pplace = document.createElement("p");
+	pplace.textContent = "\u00A0\u00A0\u00A0\u00A0place : " + place;
+	var parentElement = document.getElementById("result");
+	parentElement.appendChild(pplace);
+	
+	var pdate = document.createElement("p");
+	pdate.textContent = "\u00A0\u00A0\u00A0\u00A0date : " + date;
+	var parentElement = document.getElementById("result");
+	parentElement.appendChild(pdate);
+	
+	var ptime = document.createElement("p");
+	ptime.textContent = "\u00A0\u00A0\u00A0\u00A0time : " + time;
+	var parentElement = document.getElementById("result");
+	parentElement.appendChild(ptime);
+	
+	var pwindDirection = document.createElement("p");
+	pwindDirection.textContent = "\u00A0\u00A0\u00A0\u00A0windDirection : " + windDirection;
+	var parentElement = document.getElementById("result");
+	parentElement.appendChild(pwindDirection);
+	
+	var pwindForce = document.createElement("p");
+	pwindForce.textContent = "\u00A0\u00A0\u00A0\u00A0windForce : " + windForce;
+	var parentElement = document.getElementById("result");
+	parentElement.appendChild(pwindForce);
+	
+	var ppressure = document.createElement("p");
+	ppressure.textContent = "\u00A0\u00A0\u00A0\u00A0pressure : " + pressure;
+	var parentElement = document.getElementById("result");
+	parentElement.appendChild(ppressure);
+	
+	var pcoefficient = document.createElement("p");
+	pcoefficient.textContent = "\u00A0\u00A0\u00A0\u00A0coefficient : " + coefficient;
+	var parentElement = document.getElementById("result");
+	parentElement.appendChild(pcoefficient);
+	
+	var pkeyword = document.createElement("p");
+	pkeyword.textContent = "\u00A0\u00A0\u00A0\u00A0keyword : " + keyword;
+	var parentElement = document.getElementById("result");
+	parentElement.appendChild(pkeyword);
+	
+	var pinfos = document.createElement("p");
+	pinfos.textContent = "\u00A0\u00A0\u00A0\u00A0infos : " + infos;
+	var parentElement = document.getElementById("result");
+	parentElement.appendChild(pinfos);
+	
+	var poutro = document.createElement("p");
+	poutro.textContent = "}";
+	var parentElement = document.getElementById("result");
+	parentElement.appendChild(poutro);
+}
+
+ function copyDivToClipboard() {
+	var range = document.createRange();
+	range.selectNode(document.getElementById("result"));
+	window.getSelection().removeAllRanges(); // clear current selection
+	window.getSelection().addRange(range); // to select text
+	document.execCommand("copy");
+	window.getSelection().removeAllRanges();// to deselect
+}

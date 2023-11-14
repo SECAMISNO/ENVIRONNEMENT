@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'ajoute d'images</title>
+    <link rel="stylesheet" type="text/css" href="styles0.4.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+</head>
+<body>
+	<a href="https://www.amis-ile-noirmoutier.fr/" style="text-decoration: none;">
+		<div id="header">
+			<h1>
+				<span class="h1-text">
+					<span class="h1-first">Les Amis de l’île</span></br><br>
+					<span class="h1-sec">de Noirmoutier</span></br><br>
+				</span>
+				<img src="res/logo-amis-ile-noirmoutier.png">
+				<span class="h1-text">
+					Banque et comparateur d'images</br>
+					Commission Nature & Environnement</br></br>
+				</span>
+			</h1>
+		</div>
+	</a>
+	
+	<div id="flex-container">
+		<div id="flex-item" class="top">
+			<form id="imageForm">
+				<label for="photographer">ID :</label>
+				<input type="text" id="id"><br>
+				
+				<label for="photographer">Nom du fichier (avec extension)* :</label>
+				<input type="text" id="src" required><br>
+				
+				<label for="photographer">Photographe* :</label>
+				<input type="text" id="photographer" required><br>
+
+				<label for="place">Lieu* :</label>
+				<input type="text" id="place" required><br>
+
+				<label for="date">Date* :</label>
+				<input type="date" id="date" required><br>
+
+				<label for="time">Heure* :</label>
+				<input type="time" id="time" required><br>
+
+				<label for="windDirection">Direction du vent :</label>
+				<input type="text" id="windDirection"><br>
+
+				<label for="windForce">Force du vent :</label>
+				<input type="number" id="windForce"><br>
+
+				<label for="pressure">Pression :</label>
+				<input type="number" id="pressure"><br>
+
+				<label for="coefficient">Coefficient :</label>
+				<input type="number" id="coefficient"><br>
+
+				<label for="keyword">Mots-clés :</label>
+				<input type="text" id="keyword"><br>
+
+				<label for="infos">Informations supplémentaires :</label>
+				<textarea id="infos"></textarea><br>
+
+				<button type="button" onclick="generateText()">Générer</button>
+				<button type="button" onclick="copyDivToClipboard()">Copier</button>
+			</form>
+		</div>
+	
+		<div id="flex-item" class="top">
+			<p>1. Entrez les informations pour une image. Les informations avec une astérisque sont obligatoire.<br>
+			2. Appuyer sur "Générer" pour générer le bloc de code JS.<br>
+			3. Répéter pour toutes les images.<br>
+			4. Cliquez sur copier pour copier tous les blocs générés<br>
+			5. Coller le tout dans un mail avec un lien WeTransfer contenant les images.</p>
+			<a href=Index.html style="color:white;">Retour au comparateur</a>
+		</div>
+	</div>
+
+    <div id="result">
+	<!-- Résultats du formulaire affichés ici -->
+	</div>
+
+	<script src="script.js"></script>
+
+</body>
+</html>

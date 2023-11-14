@@ -139,6 +139,7 @@ figure.zoom {
 	height: auto;
 	overflow: hidden;
 	cursor: zoom-in;
+	margin: 10px;
 }
 figure.zoom img:hover {
 	opacity: 0;
@@ -170,12 +171,12 @@ figure.zoom img {
 }
 
 .meteo2 {
+	font-family: 'Roboto', 'Roboto-fallback', sans-serif;
 	font-weight: 400;
 	font-size: 2.5rem;
 	line-height: 2.438rem;
 	font-style: italic;
 	text-transform: uppercase;
-	font-family: 'Roboto', 'Roboto-fallback', sans-serif;
 }
 
 .meteo3 {
@@ -184,4 +185,35 @@ figure.zoom img {
 	font-weight: 500;
 	line-height: 1.938rem;
 	text-transform: uppercase;
+}
+
+.form {
+	background-color: #7f062a;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	max-width: 600px; /* Largeur maximale du rectangle */
+    margin: 0 auto; /* Pour le centrer horizontalement */
+	border: .1875rem solid #ffc400;
+}
+
+/* Formulaire */
+
+#result p {
+	margin: 0;
+}
+
+#flex-container {
+	display: flex;
+	flex-direction: row;
+}
+
+#flex-item {
+	flex: 1;
+    padding: 20px;
+}
+
+.top {
+	background-color: #7f062a;
+    color: white;
 }
