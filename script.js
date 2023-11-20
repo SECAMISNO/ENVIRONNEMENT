@@ -84,7 +84,7 @@ const imageDatabase = [
 		infos : ''
 	},
 	{
-    id : '',
+    id : 7,
     src : 'img/DSC_7535.JPG',
     photographer : 'M. Pottier',
     place : 'Plage des Dames',
