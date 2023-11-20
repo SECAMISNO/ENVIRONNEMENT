@@ -83,6 +83,20 @@ const imageDatabase = [
 		keyword : 'Chute d\'arbre',
 		infos : ''
 	},
+	{
+    id : '',
+    src : 'img/DSC_7535.JPG',
+    photographer : 'M. Pottier',
+    place : 'Plage des Dames',
+    date : '2023-10-18',
+    time : '',
+    windDirection : '',
+	windForce : '',
+    pressure : '',
+    coefficient : '',
+    keyword : 'chute d\'arbres',
+    infos : ''
+},
 
 ];
 
@@ -345,7 +359,7 @@ function generateText() {
 	parentElement.appendChild(pid);
 	
 	var psrc = document.createElement("p");
-	psrc.textContent = "\u00A0\u00A0\u00A0\u00A0src : '" + src +"',";
+	psrc.textContent = "\u00A0\u00A0\u00A0\u00A0src : 'img/" + src +"',";
 	var parentElement = document.getElementById("result");
 	parentElement.appendChild(psrc);
 	
