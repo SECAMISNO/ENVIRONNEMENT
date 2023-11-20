@@ -9,7 +9,7 @@ const imageDatabase = [
         windDirection: 'SO',
         windForce: '7',
         pressure: '994',
-        coefficient: 104,
+        coefficient: '104',
         keyword: '',
 		infos: ''
     },
@@ -23,7 +23,7 @@ const imageDatabase = [
         windDirection: 'SO',
         windForce: '7',
         pressure: '994',
-        coefficient: 104,
+        coefficient: '104',
         keyword: '',
 		infos: ''
     },
@@ -37,7 +37,7 @@ const imageDatabase = [
         windDirection: 'SO',
         windForce: '7',
         pressure: '994',
-        coefficient: 104,
+        coefficient: '104',
         keyword: '',
 		infos: ''
     },
@@ -51,7 +51,7 @@ const imageDatabase = [
         windDirection: 'SO',
         windForce: '7',
         pressure: '994',
-        coefficient: 104,
+        coefficient: '104',
         keyword: '',
 		infos: ''
     },
@@ -65,10 +65,25 @@ const imageDatabase = [
         windDirection: 'SO',
         windForce: '7',
         pressure: '994',
-        coefficient: 104,
+        coefficient: '104',
         keyword: '',
 		infos: ''
     },
+	{
+    id : 6,
+    src : 'DSC_7529.JPG',
+    photographer : 'M.Pottier',
+    place : 'Plage des Dames',
+    date : '2023-11-18',
+    time : '',
+    windDirection : '',
+    windForce : '',
+    pressure : '',
+    coefficient : '',
+    keyword : 'Chute d'arbre',
+    infos : ''
+},
+
 ];
 
 /////////////
@@ -300,6 +315,10 @@ function zoom(e){
   y = offsetY/zoomer.offsetHeight*100
   zoomer.style.backgroundPosition = x + '% ' + y + '%';
 }
+
+/////////////////////////////////
+// Formulaire d'ajout d'images //
+/////////////////////////////////
 
 function generateText() {
     var id = document.getElementById('id').value;
