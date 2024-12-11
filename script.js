@@ -102,7 +102,7 @@ const imageDatabase = [
         src : 'img/IMG_4552 (1).jpg',
         photographer : 'Fanny Potier',
         place : 'Plage de La Clère',
-        date : '',
+        date : '2024-11-01',
         time : '',
         windDirection : '',
         windForce : '',
@@ -116,7 +116,7 @@ const imageDatabase = [
         src : 'img/IMG_4553 (1).jpg',
         photographer : 'Fanny Potier',
         place : 'Plage de La Clère',
-        date : '',
+        date : '2024-11-01',
         time : '',
         windDirection : '',
         windForce : '',
@@ -130,7 +130,7 @@ const imageDatabase = [
         src : 'img/IMG_4554 (1).jpg',
         photographer : 'Fanny Potier',
         place : 'Plage de La Clère',
-        date : '',
+        date : '2024-11-01',
         time : '',
         windDirection : '',
         windForce : '',
@@ -163,7 +163,7 @@ function loadImages() {
                 row.dataset[property] = propertyValue;
             }
         }
-        
+
         row.innerHTML = `
 			<td>${image.id}</td>
             <td><img src="${image.src}" alt="Image"></td>
@@ -310,11 +310,9 @@ compareButton.addEventListener('click', () => {
     if (imageId1 === imageId2) {
         comparisonResult.textContent = 'Sélectionnez deux images différentes pour comparer.';
     } else {
-        // Récupérez les éléments image correspondant aux sélections
         const selectedImage1 = imageDatabase.find((image) => image.id === parseInt(imageId1));
         const selectedImage2 = imageDatabase.find((image) => image.id === parseInt(imageId2));
 
-		// Changer image1 et le fond de figure1 avec la valeur SelectedImage1
 		var imageElement1 = document.getElementById("image1");
 		imageElement1.src = selectedImage1.src;
 		var figureElement1 = document.getElementById("figure1");
@@ -322,7 +320,6 @@ compareButton.addEventListener('click', () => {
 			figureElement1.style.backgroundImage = `url(${selectedImage1.src})`;
 		}
 
-		// Changer image2 et le fond de figure2 avec la valeur SelectedImage2
 		var imageElement2 = document.getElementById("image2");
 		imageElement2.src = selectedImage2.src;
 		var figureElement2 = document.getElementById("figure2");
@@ -340,9 +337,8 @@ const body = document.body;
 const label = document.querySelector('.label');
 const label2 = document.querySelector('.label2');
         const button = document.getElementById('toggleButton');
-        let isWhite = true; // Variable pour suivre l'état actuel de la couleur
+        let isWhite = true;
 
-        // Fonction pour changer la couleur du fond
         function toggleBackgroundColor() {
             if (isWhite) {
                 body.style.backgroundColor = 'black';
@@ -353,10 +349,9 @@ const label2 = document.querySelector('.label2');
 				label.style.color = 'black';
 				label2.style.color = 'black';
             }
-            isWhite = !isWhite; // Inverser l'état
+            isWhite = !isWhite;
         }
 
-        // Ajouter un gestionnaire d'événement au bouton
         button.addEventListener('click', toggleBackgroundColor);
 		
 //////////
@@ -396,7 +391,7 @@ function generateText() {
 	parentElement.appendChild(pintro);
 	
 	var pid = document.createElement("p");
-	pid.textContent = "\u00A0\u00A0\u00A0\u00A0id : '" + id +"',";
+	pid.textContent = "\u00A0\u00A0\u00A0\u00A0id : " + id +",";
 	var parentElement = document.getElementById("result");
 	parentElement.appendChild(pid);
 	
