@@ -98,7 +98,7 @@ const imageDatabase = [
         infos : ''
     },
     {
-        id : '8',
+        id : 8,
         src : 'img/IMG_4552 (1).JPG',
         photographer : 'Fanny Potier',
         place : 'Plage de La Clère',
@@ -112,7 +112,7 @@ const imageDatabase = [
         infos : ''
     },
     {
-        id : '9',
+        id : 9,
         src : 'img/IMG_4553 (1).JPG',
         photographer : 'Fanny Potier',
         place : 'Plage de La Clère',
@@ -126,7 +126,7 @@ const imageDatabase = [
         infos : ''
     },
     {
-        id : '10',
+        id : 10,
         src : 'img/IMG_4554 (1).JPG',
         photographer : 'Fanny Potier',
         place : 'Plage de La Clère',
