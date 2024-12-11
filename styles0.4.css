@@ -101,7 +101,7 @@ input[type="text"] {
 
 #centerdiv {
     display: flex;
-    justify-content: center; /* Centre horizontalement */
+    justify-content: center;
 	margin: 10px 0;
 }
 
@@ -117,7 +117,7 @@ label {
 
 #comparisonResult {
     display: flex;
-    justify-content: space-evenly; /* Espace égal entre les éléments flex */
+    justify-content: space-evenly;
 }
 
 #image1, #image2 {
